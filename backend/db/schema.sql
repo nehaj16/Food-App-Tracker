@@ -5,7 +5,7 @@
 CREATE TABLE IF NOT EXISTS ingredients (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid (),
     name TEXT NOT NULL UNIQUE,
-    expiry_days INTEGER,
+    default_shelf_life_days INTEGER,
     created_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 
